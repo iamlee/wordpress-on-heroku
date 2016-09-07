@@ -107,6 +107,14 @@ define("WP_DEBUG", false);
 define("WP_CACHE", getenv("WP_CACHE") == "true");
 
 /**
+ * Define wordpress installations
+*/
+
+define( 'WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'].'/wp-content' );
+define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] .'/wp-content' );
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/coo-wordpress');
+
+/**
  * Disable the built-in cron job
  */
 define("DISABLE_WP_CRON", getenv("DISABLE_WP_CRON") == "true");
